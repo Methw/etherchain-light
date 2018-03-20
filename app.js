@@ -29,7 +29,7 @@ app.set('db', db);
 app.set('trust proxy', true);
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.png')));
 app.use(logger(config.logFormat));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -50,8 +50,8 @@ app.use('/block', block);
 app.use('/tx', tx);
 app.use('/account', account);
 app.use('/accounts', accounts);
-app.use('/contract', contract);
-app.use('/signature', signature);
+//app.use('/contract', contract);
+//app.use('/signature', signature);
 app.use('/search', search);
 
 // catch 404 and forward to error handler
